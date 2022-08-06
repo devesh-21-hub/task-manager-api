@@ -11,6 +11,10 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.json({ message: "Hello from backend! " });
+});
+
 //Register routers
 const tasks = require("./routes/tasks");
 
